@@ -1,6 +1,6 @@
 # vccw-share
 
-It allow you to share your WordPress on the VCCW via ngrok.
+It allows you to share your WordPress on the VCCW via ngrok + reverse proxy.
 
 ## How to install
 
