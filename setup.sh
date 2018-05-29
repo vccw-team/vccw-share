@@ -2,6 +2,7 @@
 
 set -ex
 
+sudo apt update
 sudo apt install unzip
 
 curl https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip -o ngrok.zip
@@ -16,6 +17,7 @@ ADDR=$(ifconfig eth1 | awk '/inet / {print $2}' | awk -F: '{print $2}')
 
 mkdir -p $HOME/.ngrok2
 touch $HOME/.ngrok2/ngrok.yml
+
 cat << EOS > $HOME/.ngrok2/ngrok.yml
 region: us
 web_addr: ${ADDR}:4040
