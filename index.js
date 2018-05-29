@@ -12,6 +12,7 @@ var proxy = httpProxy.createProxyServer({
 
 proxy.on('proxyRes', function (proxyRes, req, res) {
   if (proxyRes.headers['content-type'] && proxyRes.headers['content-type'].match(/text\/html/i)) {
+    delete proxyRes.headers['content-length'];
     modifyResponse(res, proxyRes.headers['content-encoding'], function (body) {
       if (body) {
         body = body.replace(new RegExp(origin, 'ig'), '');
