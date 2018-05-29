@@ -43,7 +43,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 For this example, you can visit `https://xxxx.ngrok.io`.
 
-To stop sharing, please press `[Ctrl] + [c]`.
+To stop sharing, press `[Ctrl+C]`.
 
 ## Customizing
 
