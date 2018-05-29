@@ -51,3 +51,13 @@ You can edit configuration file for the `ngrok` at `~/.ngrok2/ngrok.yml`.
 See for more details on documentation for ngrok.
 
 https://dashboard.ngrok.com/get-started
+
+## How it works
+
+1. `vccw-share` will launch a node based proxy server that waits request on port `5000`. The source code of this proxy server is contained in this repository.
+2. This proxy server will replace all URLs in the contents from WordPress.
+3. launch a `ngrok` to share port `5000`.
+
+## Known problems
+
+* You can't visit `wp-admin` from ngrok's URL. You should edit `wp-config.php`. But I guess that if you upload media from ngrok's URL, the URL of the media will have incorrect URL.
