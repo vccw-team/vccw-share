@@ -32,6 +32,7 @@ npm install pm2 -g
 cat << EOS > $HOME/vccw-share
 #!/usr/bin/env bash
 
+pm2 kill
 pm2 start $HOME/vccw-proxy
 ngrok start wp
 EOS
