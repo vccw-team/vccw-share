@@ -13,7 +13,7 @@ $ vagrant ssh
 Install:
 
 ```
-curl https://raw.githubusercontent.com/vccw-team/vccw-share/master/setup.sh | bash
+$ curl https://raw.githubusercontent.com/vccw-team/vccw-share/master/setup.sh | bash
 ```
 
 ## How to share

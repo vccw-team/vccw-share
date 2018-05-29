@@ -9,7 +9,7 @@ unzip -u ngrok.zip
 sudo mv ngrok /usr/local/bin/
 
 rm -fr $HOME/proxy
-git clone https://github.com/vccw-team/vccw-share.git $HOME/proxy
+git clone https://github.com/vccw-team/vccw-share.git $HOME/vccw-proxy
 cd $HOME/proxy && npm install
 
 mkdir -p $HOME/.ngrok2
@@ -27,7 +27,7 @@ npm install pm2 -g
 cat << EOS > $HOME/vccw-share
 #!/usr/bin/env bash
 
-pm2 start $HOME/proxy/index.js
+pm2 start $HOME/vccw-proxy
 ngrok start wp
 EOS
 
